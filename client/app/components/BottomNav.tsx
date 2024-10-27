@@ -4,7 +4,7 @@ import Link from 'next/link';
 const BottomNav = () => {
   return (
     <section>
-      <div className="fixed bottom-0 w-full h-16 bg-gray-300 border-t rounded-lg border-gray-200">
+      <div className="fixed bottom-0 w-full h-16 bg-gray-200 border-t rounded-lg border-gray-200">
         <div className="grid h-full max-w-lg grid-cols-3 mx-auto">
           <Link 
             href="/home" 
