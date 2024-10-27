@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import BottomNav from "./components/BottomNav";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -28,7 +29,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <main className="pb-16"> {/* Add padding-bottom to account for BottomNav height */}
+          {children}
+        </main>
+        <BottomNav />
       </body>
     </html>
   );
