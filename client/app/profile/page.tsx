@@ -46,7 +46,7 @@ const Card: React.FC<CardProps> = ({ children, className = "" }) => (
   <div className={`bg-white shadow rounded-lg ${className}`}>{children}</div>
 );
 
-const MedicalDashboard: React.FC = () => {
+const MedicalDashboardWrapper: React.FC = () => {
   const [activeTab, setActiveTab] = useState<"overview" | "records" | "access">(
     "overview"
   );
@@ -300,10 +300,10 @@ const MedicalDashboard: React.FC = () => {
 
 // const queryClient = new QueryClient();
 
-export default function Page() {
+export default function MedicalDashboard() {
   return (
     // <QueryClientProvider client={queryClient}>
-    <MedicalDashboard />
+    <MedicalDashboardWrapper />
     // {/* </QueryClientProvider> */}
   );
 }

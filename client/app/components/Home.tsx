@@ -1,17 +1,20 @@
-"use client"
-import React from 'react';
-import CardStats from './CardStats';
-import Image from 'next/image';
+"use client";
+import React from "react";
+import CardStats from "./CardStats";
+import Image from "next/image";
 import { FaBell } from "react-icons/fa";
-import profile from '@/public/profile.jpg';
+import profile from "@/public/profile.jpg";
 
 const CustomHeader = () => {
   return (
-    <div id="/" className="bg-gray-100 rounded-3xl p-6 w-full max-w-4xl mx-auto">
+    <div
+      id="/"
+      className="bg-gray-100 rounded-3xl p-6 w-full max-w-4xl mx-auto"
+    >
       <div className="flex items-center justify-between mb-8">
         <div className="flex items-center gap-4">
           <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-white">
-            <Image src={profile} alt="Profile" fill className="object-cover"/>
+            <Image src={profile} alt="Profile" fill className="object-cover" />
           </div>
           <div>
             <p className="text-gray-500 text-sm">Good Morning</p>
@@ -29,12 +32,18 @@ const CustomHeader = () => {
       </div>
 
       <div className="flex items-center gap-2">
-        <button className="px-6 py-2 bg-gray-100 border-3 border-white rounded-full shadow-sm hover:bg-gray-200 transition-colors z-10">Good</button>
+        <button className="px-6 py-2 bg-gray-100 border-3 border-white rounded-full shadow-sm hover:bg-gray-200 transition-colors z-10">
+          Good
+        </button>
         <div className="w-5 h-5 bg-white rounded-full -mx-2 z-0" />
-        <button className="px-6 py-2 bg-gray-100 border-3 border-white rounded-full shadow-sm hover:bg-gray-200 transition-colors z-10">Fair</button>
+        <button className="px-6 py-2 bg-gray-100 border-3 border-white rounded-full shadow-sm hover:bg-gray-200 transition-colors z-10">
+          Fair
+        </button>
         <div className="w-5 h-5 bg-white rounded-full -mx-2 z-0" />
 
-        <button className="px-6 py-2 bg-gray-100 border-3 border-white rounded-full shadow-sm hover:bg-gray-200 transition-colors z-10">Bad</button>
+        <button className="px-6 py-2 bg-gray-100 border-3 border-white rounded-full shadow-sm hover:bg-gray-200 transition-colors z-10">
+          Bad
+        </button>
         <div className="ml-2">
           <button className="p-2 bg-blue-600 rounded-full border-3 border-white hover:bg-blue-700 transition-colors">
             <FaBell className="w-5 h-5 text-white" />
@@ -47,8 +56,8 @@ const CustomHeader = () => {
 
 const HomeScreen = () => {
   return (
-    <section className="min-h-screen bg-white p-4">
-      <div className="max-w-4xl mx-auto space-y-8">
+    <section className="bg-white p-2">
+      <div className=" mx-auto">
         <CustomHeader />
         <CardStats />
       </div>

@@ -8,9 +8,12 @@ import Image from "next/image";
 import BottomNav from "./components/BottomNav";
 import { client, wallets } from "./utils/thirdweb_utils";
 import HomeScreen from "./components/Home";
+import { useState } from "react";
+import MobileClinic from "./mobileclinic/page";
+import MedicalDashboard from "./profile/page";
 
 // Login view component
-function LoginView() {
+function UnauthenticatedView() {
   return (
     <div className="h-[100dvh] flex flex-col overflow-hidden p-4 justify-between">
       <div className="pt-4">
@@ -46,11 +49,23 @@ function LoginView() {
 }
 
 // Connected view component
-function ConnectedView() {
+function AuthenticatedView() {
+  const [screenIndex, setScreenIndex] = useState(0);
+
+  const renderTab = () => {
+    if (screenIndex == 0) {
+      return <HomeScreen />;
+    } else if (screenIndex == 1) {
+      return <MobileClinic />;
+    }
+
+    return <MedicalDashboard />;
+  };
+
   return (
     <>
-      <HomeScreen />
-      <BottomNav />
+      {renderTab()}
+      <BottomNav onToggle={setScreenIndex} />
     </>
   );
 }
@@ -58,7 +73,7 @@ function ConnectedView() {
 // App Wrapper Component
 const AppWrapper = () => {
   const wallet = useActiveWallet();
-  return wallet ? <ConnectedView /> : <LoginView />;
+  return wallet ? <AuthenticatedView /> : <UnauthenticatedView />;
 };
 
 // Main Home Component
