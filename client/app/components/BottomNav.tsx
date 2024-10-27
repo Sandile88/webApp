@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link';
-import MobileClinic from './MobileClinic';
+import MobileClinic from '../mobileclinic/page';
 
 const BottomNav = () => {
   return (
@@ -38,7 +38,7 @@ const BottomNav = () => {
                 <span className="sr-only">New item</span>
             </button>
         </div>
-        <Link href="/MobileClinic" id="tooltip-new" role="tooltip" className="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+        <Link href="/mobileclinic" id="tooltip-new" role="tooltip" className="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
             Make a Booking
             <div className="tooltip-arrow" data-popper-arrow></div>
         </Link>
