@@ -1,7 +1,7 @@
 import React from 'react'
 import CardStats from './CardStats';
 
-const Home = () => {
+const HomeScreen = () => {
   return (
     <section>
         <CardStats/>
@@ -9,4 +9,4 @@ const Home = () => {
   )
 }
 
-export default Home;
+export default HomeScreen;
