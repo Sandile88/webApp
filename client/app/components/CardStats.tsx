@@ -4,40 +4,47 @@ import blood_cell from '../../public/blood_cell.png';
 import heart from '../../public/heart.png';
 import kidney from '../../public/kidney.png';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const CardStats = () => {
   return (
-    <>
-        <section className="py-10 bg-white sm:py-16 lg:py-24">
-    <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-        <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl lg:leading-tight">People who made it successful</h2>
-            <p className="max-w-2xl mx-auto mt-4 text-xl text-gray-600">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis.</p>
+    <section className="py-10 bg-white sm:py-16 lg:py-24">
+      <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <div className="grid grid-cols-2 gap-6 mt-8 sm:grid-cols-2 md:mt-16 lg:gap-x-12">
+          <Link href={''} className="group">
+            <div className="bg-gray-100 p-4 rounded-3xl border-4 border-white shadow-lg">
+                <Image 
+                  className="w-full transition-transform duration-300 group-hover:scale-105 relative aspect-square" src={brain} alt="Brain illustration"
+                />
+            </div>
+          </Link>
+
+          <Link href={''} className="group">
+            <div className="bg-gray-100 p-4 rounded-3xl border-4 border-white shadow-lg">
+                <Image 
+                  className="w-full transition-transform duration-300 group-hover:scale-105 relative aspect-square" src={blood_cell} alt="Blood cell illustration"
+                />
+            </div>
+          </Link>
+
+          <Link href={''} className="group">
+            <div className="bg-gray-100 p-4 rounded-3xl border-4 border-white shadow-lg">
+                <Image 
+                  className="w-full transition-transform duration-300 group-hover:scale-105 relative aspect-square" src={heart} alt="Heart illustration"
+                />
+            </div>
+          </Link>
+
+          <Link href={''} className="group">
+            <div className="bg-gray-100 p-4 rounded-3xl border-4 border-white shadow-lg">
+                <Image 
+                  className="w-full transition-transform duration-300 group-hover:scale-105 relative aspect-square" src={kidney} alt="Kidney illustration"
+                />
+            </div>
+          </Link>
         </div>
-
-        <div className="grid grid-cols-1 gap-6 mt-8 sm:grid-cols-3 md:mt-16 lg:gap-x-12">
-            <div>
-                <Image className="w-full" src={brain} alt="" />
-            </div>
-
-            <div>
-                <Image className="w-full" src={blood_cell} alt="" />
-            </div>
-            <div>
-                <Image className="w-full" src={heart} alt="" />
-            </div>
-            <div>
-                <Image className="w-full" src={kidney} alt="" />
-            </div>
-        </div>
-
-        <div className="mt-8 text-center md:mt-16">
-            <a href="#" title="" className="inline-flex items-center justify-center py-4 font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md px-14 hover:bg-blue-700 focus:bg-blue-700" role="button"> Join our team </a>
-        </div>
-    </div>
-</section>
-
-    </>
+      </div>
+    </section>
   )
 }
 
