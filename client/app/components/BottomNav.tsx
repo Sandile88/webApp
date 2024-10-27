@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import Link from 'next/link';
 
@@ -7,7 +8,7 @@ const BottomNav = () => {
       <div className="fixed bottom-0 w-full h-16 bg-gray-200 border-t rounded-lg border-gray-200">
         <div className="grid h-full max-w-lg grid-cols-3 mx-auto">
           <Link 
-            href="/home" 
+            href="/" 
             className="inline-flex flex-col items-center justify-center hover:bg-gray-50 group"
           >
             <svg className="w-5 h-5 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
